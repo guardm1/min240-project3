@@ -1538,11 +1538,11 @@
     .gwd-audio-18gb {
       position: absolute;
       transform-style: preserve-3d;
-      left: 944px;
-      top: 12px;
-      width: 72px;
-      height: 54px;
-      transform-origin: 36px 27px 0px;
+      left: 336px;
+      top: 98px;
+      width: 358px;
+      height: 142px;
+      transform-origin: 179px 71px 0px;
     }
     .gwd-audio-j2ut {
       position: absolute;
@@ -1626,6 +1626,33 @@
       transform-origin: 604.872px 96.5px 0px;
       left: 4px;
       text-align: center;
+    }
+    .gwd-audio-odc3 {
+      position: absolute;
+      transform-style: preserve-3d;
+      left: 334px;
+      top: 96px;
+      width: 358px;
+      height: 140px;
+      transform-origin: 179px 70px 0px;
+    }
+    .gwd-audio-1k3p {
+      position: absolute;
+      transform-style: preserve-3d;
+      left: 172px;
+      top: 98px;
+      width: 709px;
+      height: 140px;
+      transform-origin: 354.5px 70px 0px;
+    }
+    .gwd-audio-1k15 {
+      position: absolute;
+      transform-style: preserve-3d;
+      left: 353px;
+      top: 103px;
+      width: 315px;
+      height: 140px;
+      transform-origin: 157.5px 70px 0px;
     }
   </style>
   <link href="gwdpage_style.css" data-version="8" data-exports-type="gwd-page" rel="stylesheet">
@@ -1857,17 +1884,41 @@
       // GWD Predefined Function
       gwd.actions.gwdPagedeck.goToPage('pagedeck', 'page1_28', 'none', 1000, 'linear', 'top');
     };
+    gwd.auto_Quiz_COWClick = function(event) {
+      // GWD Predefined Function
+      gwd.actions.gwdAudio.replay('quiz_cowWord');
+    };
     gwd.auto_COWPicQuizClick = function(event) {
       // GWD Predefined Function
       gwd.actions.gwdAudio.replay('cowPicQuiz');
+    };
+    gwd.auto_Quiz_CHICKENClick = function(event) {
+      // GWD Predefined Function
+      gwd.actions.gwdAudio.replay('quiz_chickenWord');
     };
     gwd.auto_CHICKENPicQuizClick = function(event) {
       // GWD Predefined Function
       gwd.actions.gwdAudio.replay('chickenPicQuiz');
     };
+    gwd.auto_Quiz_PIGClick = function(event) {
+      // GWD Predefined Function
+      gwd.actions.gwdAudio.replay('quiz_pigWord');
+    };
     gwd.auto_PIGPicQuizClick = function(event) {
       // GWD Predefined Function
       gwd.actions.gwdAudio.replay('pigPicQuiz');
+    };
+    gwd.auto_Quiz_1_COWClick = function(event) {
+      // GWD Predefined Function
+      gwd.actions.gwdAudio.replay('quiz_1_cowWord');
+    };
+    gwd.auto_Quiz_2_CHICKENClick = function(event) {
+      // GWD Predefined Function
+      gwd.actions.gwdAudio.replay('quiz_chickenWord');
+    };
+    gwd.auto_Quiz_3_PIGClick = function(event) {
+      // GWD Predefined Function
+      gwd.actions.gwdAudio.replay('quiz_3_pigWord');
     };
   </script>
   <script type="text/javascript" gwd-events="registration">
@@ -1928,9 +1979,15 @@
       gwd.actions.events.addHandler('x_5', 'click', gwd.auto_X_5Click, false);
       gwd.actions.events.addHandler('x_6', 'click', gwd.auto_X_6Click, false);
       gwd.actions.events.addHandler('next_6', 'click', gwd.auto_Next_6Click, false);
+      gwd.actions.events.addHandler('quiz_COW', 'click', gwd.auto_Quiz_COWClick, false);
       gwd.actions.events.addHandler('COWPicQuiz', 'click', gwd.auto_COWPicQuizClick, false);
+      gwd.actions.events.addHandler('quiz_CHICKEN', 'click', gwd.auto_Quiz_CHICKENClick, false);
       gwd.actions.events.addHandler('CHICKENPicQuiz', 'click', gwd.auto_CHICKENPicQuizClick, false);
+      gwd.actions.events.addHandler('quiz_PIG', 'click', gwd.auto_Quiz_PIGClick, false);
       gwd.actions.events.addHandler('PIGPicQuiz', 'click', gwd.auto_PIGPicQuizClick, false);
+      gwd.actions.events.addHandler('quiz_1_COW', 'click', gwd.auto_Quiz_1_COWClick, false);
+      gwd.actions.events.addHandler('quiz_2_CHICKEN', 'click', gwd.auto_Quiz_2_CHICKENClick, false);
+      gwd.actions.events.addHandler('quiz_3_PIG', 'click', gwd.auto_Quiz_3_PIGClick, false);
     };
     gwd.actions.events.deregisterEventHandlers = function(event) {
       gwd.actions.events.removeHandler('explore_button', 'click', gwd.auto_Explore_buttonClick, false);
@@ -1987,9 +2044,15 @@
       gwd.actions.events.removeHandler('x_5', 'click', gwd.auto_X_5Click, false);
       gwd.actions.events.removeHandler('x_6', 'click', gwd.auto_X_6Click, false);
       gwd.actions.events.removeHandler('next_6', 'click', gwd.auto_Next_6Click, false);
+      gwd.actions.events.removeHandler('quiz_COW', 'click', gwd.auto_Quiz_COWClick, false);
       gwd.actions.events.removeHandler('COWPicQuiz', 'click', gwd.auto_COWPicQuizClick, false);
+      gwd.actions.events.removeHandler('quiz_CHICKEN', 'click', gwd.auto_Quiz_CHICKENClick, false);
       gwd.actions.events.removeHandler('CHICKENPicQuiz', 'click', gwd.auto_CHICKENPicQuizClick, false);
+      gwd.actions.events.removeHandler('quiz_PIG', 'click', gwd.auto_Quiz_PIGClick, false);
       gwd.actions.events.removeHandler('PIGPicQuiz', 'click', gwd.auto_PIGPicQuizClick, false);
+      gwd.actions.events.removeHandler('quiz_1_COW', 'click', gwd.auto_Quiz_1_COWClick, false);
+      gwd.actions.events.removeHandler('quiz_2_CHICKEN', 'click', gwd.auto_Quiz_2_CHICKENClick, false);
+      gwd.actions.events.removeHandler('quiz_3_PIG', 'click', gwd.auto_Quiz_3_PIGClick, false);
     };
     document.addEventListener("DOMContentLoaded", gwd.actions.events.registerEventHandlers);
     document.addEventListener("unload", gwd.actions.events.deregisterEventHandlers);
@@ -2087,10 +2150,10 @@
     <div id="page1_7" is="gwd-page" class="gwd-page-wrapper gwd-lightbox gwd-div-emld" data-gwd-width="1024px" data-gwd-height="700px" data-gwd-name="pic_quiz_q1">
       <div class="gwd-page-content gwd-div-1byd">
         <div data-gwd-group="background" class="gwd-div-1tfk gwd-div-1b0p gwd-div-40cv" style=""></div>
-        <p class="gwd-p-1ndo" style="">COW</p>
+        <audio is="gwd-audio" id="quiz_cowWord" sources="cowWord.mp3" class="gwd-audio-18gb" autoplay=""></audio>
+        <p class="gwd-p-1ndo" style="" id="quiz_COW">COW</p>
         <img is="gwd-image" source="assets/chicken.png" id="chicken_q1" class="gwd-img-v9zp">
         <img is="gwd-image" source="assets/Cow-PNG-11.png" id="cow_q1" class="gwd-img-slm4">
-        <audio is="gwd-audio" id="gwd-audio_13" sources="cowWord.mp3" class="gwd-audio-18gb" autoplay=""></audio>
       </div>
     </div>
     <div id="page1_19" is="gwd-page" class="gwd-page-wrapper gwd-lightbox gwd-div-emld" data-gwd-width="1024px" data-gwd-height="700px" data-gwd-name="fact_quiz_q1">
@@ -2217,7 +2280,8 @@
       <div class="gwd-page-content gwd-div-1byd">
         <div data-gwd-group="background" class="gwd-div-1tfk gwd-div-1b0p gwd-div-219o" style=""></div>
         <div class="gwd-div-pbdj" data-gwd-group="confetti"></div>
-        <p class="gwd-p-1ndo" style="">COW</p>
+        <audio is="gwd-audio" id="quiz_1_cowWord" sources="cowWord.mp3" class="gwd-audio-odc3"></audio>
+        <p class="gwd-p-1ndo" style="" id="quiz_1_COW">COW</p>
         <img is="gwd-image" source="assets/Cow-PNG-11.png" id="cow_q1_yes" class="gwd-img-slm4 gwd-img-1xd8" style="">
         <gwd-imagebutton id="next_button_1" up-image="next_button.png" over-image="" down-image="next_button_down.png" scaling="cover" class="gwd-imagebutton-1ol8" data-gwd-name="next_button"></gwd-imagebutton>
         <audio is="gwd-audio" id="yay_1" sources="yay.mp3" class="gwd-audio-166g" data-gwd-name="yay" autoplay=""></audio>
@@ -2237,10 +2301,10 @@
     <div id="page1_8" is="gwd-page" class="gwd-page-wrapper gwd-lightbox gwd-div-emld" data-gwd-width="1024px" data-gwd-height="700px" data-gwd-name="pic_quiz_q2">
       <div class="gwd-page-content gwd-div-1byd">
         <div data-gwd-group="background" class="gwd-div-1tfk gwd-div-1b0p gwd-div-1gh7" style=""></div>
-        <p class="gwd-p-1ndo" style="">CHICKEN</p>
+        <p class="gwd-p-1ndo" style="" id="quiz_CHICKEN">CHICKEN</p>
         <img is="gwd-image" source="assets/chicken_PNG2143.png" id="chicken_q2" class="gwd-img-gllk gwd-img-1xww">
         <img is="gwd-image" source="assets/pig_PNG2198.png" id="pig_q2" class="gwd-img-ibo2">
-        <audio is="gwd-audio" id="gwd-audio_14" sources="chickenWord.mp3" class="gwd-audio-j2ut" autoplay=""></audio>
+        <audio is="gwd-audio" id="quiz_chickenWord" sources="chickenWord.mp3" class="gwd-audio-j2ut" autoplay=""></audio>
       </div>
     </div>
     <div id="page1_15" is="gwd-page" class="gwd-page-wrapper gwd-lightbox gwd-div-emld" data-gwd-width="1024px" data-gwd-height="700px" data-gwd-name="pic_quiz_q2_no">
@@ -2258,7 +2322,8 @@
       <div class="gwd-page-content gwd-div-1byd">
         <div data-gwd-group="background" class="gwd-div-1tfk gwd-div-1b0p gwd-div-81aq" style=""></div>
         <div data-gwd-group="confetti" class="gwd-div-nn92"></div>
-        <p class="gwd-p-1ndo" style="">CHICKEN</p>
+        <audio is="gwd-audio" id="quiz_2_chickenWord" sources="chickenWord.mp3" class="gwd-audio-1k3p"></audio>
+        <p class="gwd-p-1ndo" style="" id="quiz_2_CHICKEN">CHICKEN</p>
         <img is="gwd-image" source="assets/chicken_PNG2143.png" id="chicken_q2_1" class="gwd-img-gllk gwd-img-16ne">
         <gwd-imagebutton up-image="next_button.png" over-image="" down-image="next_button_down.png" scaling="cover" class="gwd-imagebutton-1g79" id="next_2"></gwd-imagebutton>
         <audio is="gwd-audio" id="yay_2" sources="yay.mp3" class="gwd-audio-1f53" autoplay=""></audio>
@@ -2267,19 +2332,20 @@
     <div id="page1_9" is="gwd-page" class="gwd-page-wrapper gwd-lightbox gwd-div-emld" data-gwd-width="1024px" data-gwd-height="700px" data-gwd-name="pic_quiz_q3">
       <div class="gwd-page-content gwd-div-1byd">
         <div data-gwd-group="background" class="gwd-div-1tfk gwd-div-1b0p gwd-div-sgfi" style=""></div>
-        <p class="gwd-p-1ndo" style="">PIG</p>
+        <p class="gwd-p-1ndo" style="" id="quiz_PIG">PIG</p>
         <img is="gwd-image" source="assets/pig_png.png" id="pig_q3" class="gwd-img-6hyz">
         <img is="gwd-image" source="assets/cow2.png" id="cow_q3" class="gwd-img-lwcs">
-        <audio is="gwd-audio" id="gwd-audio_15" class="gwd-audio-pelz" sources="pigWord.mp3" autoplay=""></audio>
+        <audio is="gwd-audio" id="quiz_pigWord" class="gwd-audio-pelz" sources="pigWord.mp3" autoplay=""></audio>
       </div>
     </div>
-    <div id="page1_16" is="gwd-page" class="gwd-page-wrapper gwd-lightbox gwd-div-emld" data-gwd-width="1024px" data-gwd-height="700px" data-gwd-name="pic_quiz_q3_yes">
+    <div id="page1_16" is="gwd-page" class="gwd-page-wrapper gwd-lightbox gwd-div-emld" data-gwd-width="1024px" data-gwd-height="700px" data-gwd-name="pic_quiz_q3_yes" style="">
       <div class="gwd-page-content gwd-div-1byd">
         <div data-gwd-group="background" class="gwd-div-1tfk gwd-div-1b0p gwd-div-wgn1" style=""></div>
         <div data-gwd-group="confetti" class="gwd-div-7y6f"></div>
-        <p class="gwd-p-1ndo" style="">PIG</p>
+        <audio is="gwd-audio" id="quiz_3_pigWord" sources="pigWord.mp3" class="gwd-audio-1k15"></audio>
+        <p class="gwd-p-1ndo" style="" id="quiz_3_PIG">PIG</p>
         <img is="gwd-image" source="assets/pig_png.png" id="pig_q3_1" class="gwd-img-6hyz gwd-img-tyna">
-        <gwd-imagebutton id="next_3" up-image="next_button.png" over-image="" down-image="next_button.png" scaling="cover" class="gwd-imagebutton-14v4"></gwd-imagebutton>
+        <gwd-imagebutton id="next_3" up-image="next_button.png" over-image="" down-image="next_button_down.png" scaling="cover" class="gwd-imagebutton-14v4"></gwd-imagebutton>
         <audio is="gwd-audio" id="gwd-audio_4" sources="yay.mp3" class="gwd-audio-1j79" autoplay=""></audio>
       </div>
     </div>
@@ -2313,7 +2379,7 @@
         <gwd-imagebutton id="back_button_2" up-image="back_button.png" over-image="" down-image="back_button_down.png" scaling="contain" class="gwd-imagebutton-1870" data-gwd-name="back_button_01"></gwd-imagebutton>
       </div>
     </div>
-    <div id="page1_3" is="gwd-page" class="gwd-page-wrapper gwd-lightbox gwd-div-1c3p" data-gwd-width="1024px" data-gwd-height="700px" data-gwd-name="cow_page" style="">
+    <div id="page1_3" is="gwd-page" class="gwd-page-wrapper gwd-lightbox gwd-div-1c3p" data-gwd-width="1024px" data-gwd-height="700px" data-gwd-name="cow_page">
       <div class="gwd-page-content gwd-div-poaa">
         <div class="gwd-div-1o3w gwd-div-sv9l" data-gwd-group="farm"></div>
         <img is="gwd-image" source="assets/cow2.png" id="cow_image_1" class="gwd-img-ovn9 gwd-img-8hu8">
